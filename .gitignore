@@ -1,0 +1,18 @@
+.DS_Store
+
+# Local environment and secrets
+.env
+*.env.local
+
+# Python/cache artifacts
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local runtime state
+helix_srop.db
+*.db
+chroma_db/

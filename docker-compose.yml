@@ -1,0 +1,29 @@
+services:
+  api:
+    build:
+      context: .
+      args:
+        - HTTP_PROXY
+        - HTTPS_PROXY
+        - http_proxy
+        - https_proxy
+        - ALL_PROXY
+        - all_proxy
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: sqlite+aiosqlite:////data/helix_srop.db
+      CHROMA_PERSIST_DIR: /data/chroma_db
+    ports:
+      - "8000:8000"
+    volumes:
+      - helix-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=5).read()"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  helix-data:

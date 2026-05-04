@@ -1,0 +1,9 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /home/cv/git/helix-srop-assignment && uv run pytest -q$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "uv": true
+    }
+}

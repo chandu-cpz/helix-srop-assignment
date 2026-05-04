@@ -1,0 +1,12 @@
+.git
+.github
+.env
+*.env.local
+.venv
+__pycache__
+.pytest_cache
+.mypy_cache
+.ruff_cache
+*.pyc
+helix_srop.db
+chroma_db
