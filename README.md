@@ -1,5 +1,6 @@
 # Helix SROP - AI Support Concierge
 
+Name: Chandrakanth V
 Stateful RAG Orchestration Pipeline for Helix support workflows. The service exposes a FastAPI chat API backed by async SQLAlchemy, Google ADK `AgentTool` routing, persistent session state, Chroma document retrieval, and structured per-turn traces.
 
 ## Setup
